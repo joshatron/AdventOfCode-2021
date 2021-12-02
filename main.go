@@ -12,6 +12,8 @@ import (
 func main() {
 	fmt.Println(day1Puzzle1())
 	fmt.Println(day1Puzzle2())
+	fmt.Println(day2Puzzle1())
+	fmt.Println(day2Puzzle2())
 }
 
 func convertToInts(lines []string) []int {
@@ -70,4 +72,56 @@ func day1Puzzle2() string {
 	}
 
 	return fmt.Sprint(increases)
+}
+
+func day2Puzzle1() string {
+	lines := splitIntoLines(readDayInput("02"))
+
+	depth := 0
+	position := 0
+
+	for _, line := range lines {
+		parts := strings.Split(line, " ")
+		direction := parts[0]
+		magnitude, _ := strconv.Atoi(parts[1])
+		switch direction {
+		case "forward":
+			position += magnitude
+		case "up":
+			depth -= magnitude
+		case "down":
+			depth += magnitude
+		default:
+			fmt.Println("Unknown direction: ", direction)
+		}
+	}
+
+	return fmt.Sprint(depth * position)
+}
+
+func day2Puzzle2() string {
+	lines := splitIntoLines(readDayInput("02"))
+
+	depth := 0
+	position := 0
+	aim := 0
+
+	for _, line := range lines {
+		parts := strings.Split(line, " ")
+		direction := parts[0]
+		magnitude, _ := strconv.Atoi(parts[1])
+		switch direction {
+		case "forward":
+			position += magnitude
+			depth += aim * magnitude
+		case "up":
+			aim -= magnitude
+		case "down":
+			aim += magnitude
+		default:
+			fmt.Println("Unknown direction: ", direction)
+		}
+	}
+
+	return fmt.Sprint(depth * position)
 }
