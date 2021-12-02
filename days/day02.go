@@ -1,23 +1,21 @@
-package day02
+package days
 
 import (
 	"fmt"
 	"strconv"
-	"strings"
 
 	"joshatron.io/aoc2021/input"
 )
 
 func Day2Puzzle1() string {
-	lines := input.SplitIntoLines(input.ReadDayInput("02"))
+	lines := input.SeparateBySpaces(input.SplitIntoLines(input.ReadDayInput("02")))
 
 	depth := 0
 	position := 0
 
 	for _, line := range lines {
-		parts := strings.Split(line, " ")
-		direction := parts[0]
-		magnitude, _ := strconv.Atoi(parts[1])
+		direction := line[0]
+		magnitude, _ := strconv.Atoi(line[1])
 		switch direction {
 		case "forward":
 			position += magnitude
@@ -34,16 +32,15 @@ func Day2Puzzle1() string {
 }
 
 func Day2Puzzle2() string {
-	lines := input.SplitIntoLines(input.ReadDayInput("02"))
+	lines := input.SeparateBySpaces(input.SplitIntoLines(input.ReadDayInput("02")))
 
 	depth := 0
 	position := 0
 	aim := 0
 
 	for _, line := range lines {
-		parts := strings.Split(line, " ")
-		direction := parts[0]
-		magnitude, _ := strconv.Atoi(parts[1])
+		direction := line[0]
+		magnitude, _ := strconv.Atoi(line[1])
 		switch direction {
 		case "forward":
 			position += magnitude

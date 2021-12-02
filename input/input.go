@@ -8,6 +8,17 @@ import (
 	"strings"
 )
 
+func SeparateBySpaces(lines []string) [][]string {
+	separated := make([][]string, len(lines))
+
+	for i, line := range lines {
+		separated[i] = strings.Split(line, " ")
+	}
+
+	return separated
+
+}
+
 func ConvertToInts(lines []string) []int {
 	ints := make([]int, len(lines))
 

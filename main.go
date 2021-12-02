@@ -3,13 +3,12 @@ package main
 import (
 	"fmt"
 
-	"joshatron.io/aoc2021/days/day01"
-	"joshatron.io/aoc2021/days/day02"
+	"joshatron.io/aoc2021/days"
 )
 
 func main() {
-	fmt.Println(day01.Day1Puzzle1())
-	fmt.Println(day01.Day1Puzzle2())
-	fmt.Println(day02.Day2Puzzle1())
-	fmt.Println(day02.Day2Puzzle2())
+	fmt.Println(days.Day1Puzzle1())
+	fmt.Println(days.Day1Puzzle2())
+	fmt.Println(days.Day2Puzzle1())
+	fmt.Println(days.Day2Puzzle2())
 }
