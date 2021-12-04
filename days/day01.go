@@ -7,7 +7,7 @@ import (
 	"joshatron.io/aoc2021/input"
 )
 
-func Day1Puzzle1() string {
+func Day01Puzzle1() string {
 	lines := input.ConvertToInts(input.SplitIntoLines(input.ReadDayInput("01")))
 
 	previous := math.MaxInt
@@ -22,7 +22,7 @@ func Day1Puzzle1() string {
 	return fmt.Sprint(increases)
 }
 
-func Day1Puzzle2() string {
+func Day01Puzzle2() string {
 	lines := input.ConvertToInts(input.SplitIntoLines(input.ReadDayInput("01")))
 
 	increases := 0

@@ -7,7 +7,7 @@ import (
 	"joshatron.io/aoc2021/input"
 )
 
-func Day3Puzzle1() string {
+func Day03Puzzle1() string {
 	lines := input.SplitIntoLines(input.ReadDayInput("03"))
 
 	var gammaB, epsilonB string
@@ -47,7 +47,7 @@ func binaryStringToInt(num string) int {
 	return int(value)
 }
 
-func Day3Puzzle2() string {
+func Day03Puzzle2() string {
 	lines := input.SplitIntoLines(input.ReadDayInput("03"))
 
 	oxygenGeneratorList := lines

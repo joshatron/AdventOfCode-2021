@@ -7,7 +7,7 @@ import (
 	"joshatron.io/aoc2021/input"
 )
 
-func Day2Puzzle1() string {
+func Day02Puzzle1() string {
 	lines := input.SeparateBySpaces(input.SplitIntoLines(input.ReadDayInput("02")))
 
 	depth := 0
@@ -31,7 +31,7 @@ func Day2Puzzle1() string {
 	return fmt.Sprint(depth * position)
 }
 
-func Day2Puzzle2() string {
+func Day02Puzzle2() string {
 	lines := input.SeparateBySpaces(input.SplitIntoLines(input.ReadDayInput("02")))
 
 	depth := 0
