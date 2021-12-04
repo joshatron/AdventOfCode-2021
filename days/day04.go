@@ -101,6 +101,7 @@ func getBoards(lines []string) []Board {
 			currentBoard = [][]int{}
 		}
 	}
+	boards = append(boards, Board{currentBoard, generateMarks(currentBoard)})
 
 	return boards
 }
