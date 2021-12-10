@@ -72,15 +72,6 @@ func (s *Stack) pop() rune {
 	}
 }
 
-func (s *Stack) print() {
-	e := s.top
-	for e.prev != nil {
-		fmt.Print(string(e.item))
-		e = *e.prev
-	}
-	fmt.Println()
-}
-
 func bracketsMatch(open, close rune) bool {
 	return (open == '(' && close == ')') || (open == '[' && close == ']') || (open == '{' && close == '}') || (open == '<' && close == '>')
 }
