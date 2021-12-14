@@ -31,4 +31,7 @@ func main() {
 	fmt.Println("Day 11, Puzzle 2: ", days.Day11Puzzle2())
 	fmt.Println("Day 12, Puzzle 1: ", days.Day12Puzzle1())
 	fmt.Println("Day 12, Puzzle 2: ", days.Day12Puzzle2())
+	fmt.Println("Day 13, Puzzle 1: ", days.Day13Puzzle1())
+	fmt.Println("Day 13, Puzzle 2:")
+	fmt.Print(days.Day13Puzzle2())
 }
